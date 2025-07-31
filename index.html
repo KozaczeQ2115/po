@@ -410,11 +410,29 @@
   gap: 1.5rem;
 }
 
-@media(min-width: 768px) {
-  .modern-contact .grid {
-    grid-template-columns: repeat(3, 1fr);
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #1a1a1d;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
   }
 }
+
 
 .modern-contact a {
   background: rgba(100, 255, 218, 0.1); /* transparentny akcent */
@@ -590,6 +608,7 @@
     </div>
   </div>
 </nav>
+
 
 
   <header data-aos="fade-down">
@@ -1053,6 +1072,7 @@
       }
     );
   </script>
+  
   <script>
   document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById("hamburger");
@@ -1070,6 +1090,5 @@
     });
   });
 </script>
-
 </body>
 </html>
